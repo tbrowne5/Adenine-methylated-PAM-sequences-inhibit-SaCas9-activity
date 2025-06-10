@@ -34,13 +34,14 @@ def parse_args(args):
         elif args[i] == "--help" or args[i] == "-h":
             print("Usage: python crisprHAL.py [options]")
             print("Options:")
-            print("  --input, -i   [Input file path]                Input file for prediction (fasta, csv, or tsv)")
-            print("  --output, -o  [Output file path]               Output file for prediction results")
-            print("  --circular                                     Process fasta as a circular input sequence")
-            print("  --compare, -c                                  Compare predictions with scores in the input file second column")
-            print("  --train, -t                                    Train the model specified")
-            print("  --epochs, -e  [Integer epoch value]            Specify number of epochs for training (default: model-specific)")
-            print("  --help, -h                                     Show this help message")
+            print("  --input, -i   [Input file path]             Input file for prediction (fasta, csv, or tsv)")
+            print("  --output, -o  [Output file path]            Output file for prediction results")
+            print("  --circular                                  Process fasta as a circular input sequence")
+            print("  --compare, -c                               Compare predictions with scores in the input file second column")
+            print("  --train, -t                                 Train the model specified")
+            print("  --epochs, -e  [Integer epoch value]         Specify number of epochs for training (default: model-specific)")
+            print("  --summary, -s                               Print the model architecture summary")
+            print("  --help, -h                                  Show this help message")
             sys.exit(0)
     
     if training == True and inputFile is not None:
