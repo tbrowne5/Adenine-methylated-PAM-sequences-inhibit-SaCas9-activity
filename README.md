@@ -165,7 +165,7 @@ This will assess whether the training model is working. It will not change the m
 
 Raw sequence reads from which the datasets are derived are available at: https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1260991
 
-BioProject ID: PRJNA1260991
+NCBI SRA BioProject: PRJNA1260991
 
 
 ## 7: Citations
