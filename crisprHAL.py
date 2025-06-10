@@ -32,7 +32,7 @@ def parse_args(args):
         elif args[i] == "--epochs" or args[i] == "-e": epochs = int(args[i + 1])
         elif args[i] == "--summary" or args[i] == "-s": summary = True
         elif args[i] == "--model" or args[i] == "-m" or args[i] == "--enzyme":
-            if args[i + 1].upper() in [["TEVSACAS9","SACAS9","TEVSACAS","TEVCAS9","SACAS"]: modelName = "SACAS9"
+            if args[i + 1].upper() in ["TEVSACAS9","SACAS9","TEVSACAS","TEVCAS9","SACAS"]: modelName = "SACAS9"
             else:
                 print(f"Error: Model '{args[i + 1]}' is not recognized. Available model is: SaCas9, for more models please use: github.com/tbrowne5/crisprHAL")
                 sys.exit(1)
