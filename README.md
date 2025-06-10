@@ -51,7 +51,7 @@ Additional information and methods:
 
 These are in a file called requirements.txt and should be in the working directory.
 ```
-python
+python=3.11
 tensorflow
 ```
 
