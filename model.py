@@ -3,7 +3,6 @@ import tensorflow.keras as k
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.layers import Input, Dense, Conv1D, MaxPooling1D, Conv2D, MaxPooling2D, Dropout, Bidirectional, GRU, LeakyReLU, Flatten, concatenate, BatchNormalization
 from tensorflow.keras.models import Model
-#from keras_gradient_noise import add_gradient_noise
 
 modelVersionInputLength = {
     "TEVSACAS9": [29, 1, 8]
