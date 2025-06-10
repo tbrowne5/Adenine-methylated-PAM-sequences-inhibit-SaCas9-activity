@@ -6,23 +6,23 @@ from tensorflow.keras.models import Model
 #from keras_gradient_noise import add_gradient_noise
 
 modelVersionInputLength = {
-    "SACAS9": [29, 1, 8]
+    "TEVSACAS9": [29, 1, 8]
     }
 
 modelVersionPath = {
-    "SACAS9": "models/TevSaCas9.h5"
+    "TEVSACAS9": "models/TEVSACAS9.h5"
     }
 
 modelVersionTrainingData = {
-    "SACAS9": "data/TevSaCas9_training_data.csv"
+    "TEVSACAS9": "data/TevSaCas9_training_data.csv"
     }
 
 modelVersionTestingData = {
-    "SACAS9": "data/TevSaCas9_testing_data.csv"
+    "TEVSACAS9": "data/TevSaCas9_testing_data.csv"
     }
 
 modelVersionDefaultEpochs = {
-    "SACAS9": 230
+    "TEVSACAS9": 230
     }
 
 class models:
