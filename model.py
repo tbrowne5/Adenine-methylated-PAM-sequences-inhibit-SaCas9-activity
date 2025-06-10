@@ -31,7 +31,7 @@ class models:
     nucleotide_dimensions=0
     compile_options={"optimizer": "unset", "loss": "unset"}
     
-    def __init__(self, model_name, summary, nt_dims=4, optimizer="adam", learning_rate=0.0005, loss_function="mean_squared_error", drop_rate=0.3,CNN_filters=128, window_size=3, CNN_drop=0.3, conv1D_padding="same", CNN_dense1=128, CNN_dense2=64, maxpool1D_padding="same", RNN_size=128, RNN_dense1=128, RNN_dense2=64, CNN_RNN_drop=0.3):
+    def __init__(self, model_name, summary, nt_dims=4, optimizer="adam", learning_rate=0.0001, loss_function="mean_squared_error", drop_rate=0.3,CNN_filters=128, window_size=3, CNN_drop=0.3, conv1D_padding="same", CNN_dense1=128, CNN_dense2=64, maxpool1D_padding="same", RNN_size=128, RNN_dense1=128, RNN_dense2=64, CNN_RNN_drop=0.3):
         
         print("\nINITIALIZATION OF MODELS\n")
         try:
@@ -41,7 +41,7 @@ class models:
             print(f"ERROR: Optimizer name {optimizer} not found or learning rate {learning_rate} not supported.\n{e}")
         try:
             self.nucleotide_dimensions=nt_dims
-            self.model = self.build_crisprHAL_GPU(modelVersionInputLength[model_name][0], drop_rate, CNN_filters, window_size, CNN_drop, conv1D_padding, CNN_dense1, CNN_dense2, maxpool1D_padding, RNN_size, RNN_dense1, RNN_dense2, CNN_RNN_drop)
+            self.model = self.build_crisprHAL(modelVersionInputLength[model_name][0], drop_rate, CNN_filters, window_size, CNN_drop, conv1D_padding, CNN_dense1, CNN_dense2, maxpool1D_padding, RNN_size, RNN_dense1, RNN_dense2, CNN_RNN_drop)
             if summary: self.model.summary()
             print("\n" + model_name + " model loaded.\n")
         except Exception as e:
@@ -53,7 +53,7 @@ class models:
         else:
             raise ValueError(f"Unsupported optimizer: {optimizer_name}, or unsupported learning rate: {learning_rate}")
     
-    def build_crisprHAL_GPU(self, input_length, drop_rate=0.3, CNN_filters=128, window_size=3, CNN_drop=0.3, conv1D_padding="same", CNN_dense1=128, CNN_dense2=64, maxpool1D_padding="same", RNN_size=128, RNN_dense1=128, RNN_dense2=64, CNN_RNN_drop=0.3):
+    def build_crisprHAL(self, input_length, drop_rate=0.3, CNN_filters=128, window_size=3, CNN_drop=0.3, conv1D_padding="same", CNN_dense1=128, CNN_dense2=64, maxpool1D_padding="same", RNN_size=128, RNN_dense1=128, RNN_dense2=64, CNN_RNN_drop=0.3):
         i = k.Input(shape=(input_length,self.nucleotide_dimensions), name="Input")
 
         # Joint CNN Block
@@ -88,11 +88,10 @@ class models:
         drd2 = Dropout(CNN_drop, name="drd2")(ld2)
         x_1d_o = Dense(1, name="x_1d_o")(drd2)
 
-        # CuDNN NVIDIA-GPU Optimized RNN: Bidirectional Gated Recurrent Unit Branch
-        r1 = Bidirectional(GRU(RNN_size, kernel_initializer='he_normal', dropout=0.0, activation='tanh', recurrent_dropout=0.0, recurrent_activation='sigmoid', unroll=False, use_bias=True, reset_after=True), name="r1")(dr1)
-        rd1 = Dropout(drop_rate, name="rd1")(r1)
+        # Bidirectional Gated Recurrent Unit Branch
+        r1 = Bidirectional(GRU(RNN_size, kernel_initializer='he_normal', dropout=drop_rate, recurrent_dropout=0.2), name="r1")(dr1)
         
-        f_LSTM = Flatten(name="f_LSTM")(rd1)
+        f_LSTM = Flatten(name="f_LSTM")(r1)
         
         d1_LSTM = Dense(RNN_dense1, name="d1_LSTM")(f_LSTM)
         ld1_LSTM = LeakyReLU(name="ld1_LSTM")(d1_LSTM)
