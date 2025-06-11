@@ -26,7 +26,7 @@ class processing:
             targets = []
             # Find NGG targets
             for i in range(20+inputParameters[1], len(sequence) - inputParameters[2] + 1):
-                if sequence[i+2:i+5] in ["GGG","GGA","GAG"."GAA"]:
+                if sequence[i+2:i+5] in ["GGG","GGA","GAG","GAA"]:
                     target = sequence[i-(20+inputParameters[1]):i+inputParameters[2]]
                     if len(target) == inputParameters[0]:
                         targets.append(target)
@@ -37,7 +37,7 @@ class processing:
             if reverseComplement:
                 sequence = sequence[::-1].translate(str.maketrans("ACGT", "TGCA"))
                 for i in range(20+inputParameters[1], len(sequence) - inputParameters[2] + 1):
-                    if sequence[i+1:i+3] == "GG":
+                if sequence[i+2:i+5] in ["GGG","GGA","GAG","GAA"]:
                         target = sequence[i-(20+inputParameters[1]):i+inputParameters[2]]
                         if len(target) == inputParameters[0]:
                             targets.append(target)
