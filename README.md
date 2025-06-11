@@ -49,21 +49,19 @@ Additional information and methods:
 
 ## 0: Requirements
 
-These are in a file called requirements.txt and should be in the working directory.
+Python and Tensorflow Versions:
 ```
-python=3.11
-tensorflow
+python==3.11
+tensorflow==2.12
 ```
-
-These can be instantiated within a conda environment: ```Time: 1-10 minutes```
-
+Create a virtual environment and install Tensorflow:
 ```
-conda create --name HAL
-conda activate HAL
-conda install --file requirements.txt
+python3.11 -m venv HAL
+source HAL/bin/activate
+pip install tensorflow==2.12
 ```
 
-This installation has been tested in Ubuntu 20.04.4 and Mac OSX 10.14.5, but has not been tested on Windows.
+This installation has been tested in Ubuntu 20.04.4 and Mac OSX 15.2, but has not been tested on Windows.
 
 
 ## 1: Run the model test
