@@ -53,7 +53,7 @@ def parse_args(args):
 # If no output specified, but input specified, strip file type annd add _predictions.csv
 
 def run_model():
-    global training, modelName, inputFile, outputFile, compare, epochs, circularInput
+    global training, modelName, inputFile, outputFile, compare, epochs, circularInput, summary
 
     process = processing()
     model = models(modelName, summary)
