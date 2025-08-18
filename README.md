@@ -1,4 +1,4 @@
-# crisprHAL — Adenine methylated PAM sequences inhibit SaCas9 activity
+# crisprHAL — [Adenine methylated PAM sequences inhibit SaCas9 activity](https://github.com/tbrowne5/Adenine-methylated-PAM-sequences-inhibit-SaCas9-activity)
 Note: this is a static paper-specific repository, and as such, may not contain up-to-date models. For the crisprHAL prediction tool, please visit the first link below or visit the website at the second link below.
 
 <p align="center">
@@ -8,8 +8,8 @@ Note: this is a static paper-specific repository, and as such, may not contain u
 ## Links to the crisprHAL repositories, papers, and web tool:
 * [Up-to-date crisprHAL prediction tool repository for use](https://github.com/tbrowne5/crisprHAL)
 * [Online crisprHAL prediction tool](https://crisprhal.streamlit.app/) ([Repository](https://github.com/tbrowne5/crisprHAL_streamlit))
-* [crisprHAL 2.0 paper repository](https://github.com/tbrowne5/Better-data-for-better-predictions-data-curation-improves-deep-learning-for-sgRNA-Cas9-prediction/)
-* [crisprHAL 2.0 pre-print](https://www.biorxiv.org/content/10.1101/2025.06.24.661356v1.full)
+* [crisprHAL 2.0 SpCas9 paper repository](https://github.com/tbrowne5/Better-data-for-better-predictions-data-curation-improves-deep-learning-for-sgRNA-Cas9-prediction/)
+* [crisprHAL 2.0 SpCas9 pre-print](https://www.biorxiv.org/content/10.1101/2025.06.24.661356v1.full)
 * [crisprHAL SaCas9 paper repository](https://github.com/tbrowne5/Adenine-methylated-PAM-sequences-inhibit-SaCas9-activity) — **YOU ARE HERE**
 * [crisprHAL SaCas9 pre-print](https://www.biorxiv.org/content/10.1101/2025.08.13.670096v1)
 * [crisprHAL SpCas9 paper repository](https://github.com/tbrowne5/A-generalizable-Cas9-sgRNA-prediction-model-using-machine-transfer-learning)
