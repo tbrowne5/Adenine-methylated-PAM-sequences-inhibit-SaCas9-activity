@@ -2,7 +2,7 @@
 Note: this is a static paper-specific repository, and as such, may not contain up-to-date models. For the crisprHAL prediction tool, please visit the first link below or visit the website at the second link below.
 
 <p align="center">
-  <img src="[data/crisprHAL_Logo.png](https://github.com/tbrowne5/crisprHAL/blob/main/data/crisprHAL_Logo.png)" width="600">
+  <img src="https://github.com/tbrowne5/crisprHAL/blob/main/data/crisprHAL_Logo.png" width="600">
 </p>
 
 ## Links to the crisprHAL repositories, papers, and web tool:
