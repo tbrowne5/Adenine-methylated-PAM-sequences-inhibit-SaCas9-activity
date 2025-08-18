@@ -179,4 +179,4 @@ NCBI SRA BioProject: PRJNA1260991
 
 ## 8: How to cite crisprHAL SaCas9
 
-Ham, D.T., Browne, T.S., et al. PAM adenine methylation and flanking sequence regulate SaCas9 activity in bacteria. **BioRxiv**, (Pre-Print). https://doi.org/10.1101/2025.08.13.670096
+Ham, D.T., Browne, T.S., et al. PAM adenine methylation and flanking sequence regulate SaCas9 activity in bacteria. **BioRxiv**. (Pre-Print) https://doi.org/10.1101/2025.08.13.670096
