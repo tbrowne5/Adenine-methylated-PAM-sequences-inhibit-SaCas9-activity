@@ -1,4 +1,4 @@
-# crisprHAL — [Adenine methylated PAM sequences inhibit SaCas9 activity](https://github.com/tbrowne5/Adenine-methylated-PAM-sequences-inhibit-SaCas9-activity)
+# crisprHAL — [Adenine methylated PAM sequences inhibit SaCas9 activity](https://doi.org/10.1093/nar/gkaf1520)
 Note: this is a static paper-specific repository, and as such, may not contain up-to-date models. For the crisprHAL prediction tool, please visit the first link below or visit the website at the second link below.
 
 <p align="center">
